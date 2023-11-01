@@ -1,7 +1,8 @@
 import s from './Portfolio.module.css';
-import ProjectList from '../ProjectList/ProjectList';
-import Toolbar from '../Toolbar/Toolbar';
+import ProjectList from './ProjectList/ProjectList';
+import Toolbar from './Toolbar/Toolbar';
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const Portfolio = () => {
     const [projects, setProjects] = useState([{
@@ -55,7 +56,7 @@ const Portfolio = () => {
       }, {
         img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/filter/img/place200x290_3.png",
         category: "Flayers"
-      }]);
+      }].map(projectData => ({...projectData, uuid: uuidv4()})));
     const [currentProjects, setCurrentProjects] = useState([...projects]);
     const [filters, setFilters] = useState(["All", "Websites", "Flayers", "Business Cards"]);
     const [currentFilter, setCurrentFilter] = useState(filters[0]);

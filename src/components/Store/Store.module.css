@@ -1,0 +1,10 @@
+.store__container {
+    width: 100%;
+}
+
+.store__view_change {
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}

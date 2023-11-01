@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard/ProjectCard';
 const ProjectList = ({projects}) => {
     return(
         <div className={s.project_list__container}>
-            {projects.map(projectData => <ProjectCard projectData={projectData}></ProjectCard>)}
+            {projects.map(projectData => <ProjectCard key={projectData.uuid} projectData={projectData}></ProjectCard>)}
         </div>
     )
 }
