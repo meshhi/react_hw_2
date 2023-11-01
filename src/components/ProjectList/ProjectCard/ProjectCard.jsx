@@ -3,7 +3,7 @@ import s from './ProjectCard.module.css';
 const ProjectCard = ({projectData}) => {
     return(
         <div className={s.project_card__container}>
-            <img src={projectData.img} alt="" />
+            <img className={s.project_card__image} src={projectData.img} alt="" />
         </div>
     )
 };

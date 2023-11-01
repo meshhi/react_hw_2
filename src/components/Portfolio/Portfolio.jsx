@@ -56,11 +56,27 @@ const Portfolio = () => {
         img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/filter/img/place200x290_3.png",
         category: "Flayers"
       }]);
+    const [currentProjects, setCurrentProjects] = useState([...projects]);
+    const [filters, setFilters] = useState(["All", "Websites", "Flayers", "Business Cards"]);
+    const [currentFilter, setCurrentFilter] = useState(filters[0]);
+
+    const handleSelectFilter = (e) => {
+      setCurrentFilter(e.target.textContent);
+      if (e.target.textContent === "All") {
+        setCurrentProjects([...projects]);
+      } else {
+        setCurrentProjects(projects.filter(project => project.category === e.target.textContent));
+      }
+    };
 
     return(
         <div className={s.portfolio__container}>
-            <Toolbar></Toolbar>
-            <ProjectList projects={projects}></ProjectList>
+            <Toolbar
+              filters={filters}
+              selected={currentFilter}
+              onSelectFilter={handleSelectFilter}
+            />
+            <ProjectList projects={currentProjects}></ProjectList>
         </div>
     )
 }

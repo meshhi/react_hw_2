@@ -1,3 +1,5 @@
 .project_list__container {
-
+    display: block;
+    column-count: 3;
+    column-gap: 2rem;
 }
