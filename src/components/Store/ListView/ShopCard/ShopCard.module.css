@@ -1,15 +1,27 @@
 .shop_card {
     display: flex;
     background-color: #f5f5f5;
-    padding: 2rem;
+    padding: 0 2rem;
 }
 
 .shop_card__title {
     width: 15%;
+    text-transform: uppercase;
+    font-weight: normal;
 }
 
 .shop_card__color {
     width: 10%;
+}
+
+.shop_card__price {
+    color: red;
+}
+
+.shop_card__add_btn {
+    border-radius: 1rem;
+    border: 1px solid red;
+    color: red;
 }
 
 /* LIST */
@@ -49,21 +61,32 @@
 .shop_card__tile {
     width: calc(100%/3 - 2rem);
     flex-direction: column;
+    box-shadow: 8px 9px 10px 2px rgba(0, 0, 0, 0.23);
+    padding: 2rem 0;
 }
 
 .shop_card__tile .shop_card__title {
     order: 1;
+    width: 100%;
+    text-align: center;
 }
 
 .shop_card__tile .shop_card__color {
     order: 2;
+    width: 100%;
+    text-align: center;
 }
 
-.shop_card__list .shop_card__image {
+.shop_card__tile .shop_card__image {
     order: 3;
+    width: 100%;
+    text-align: center;
 }
 
-.btn__wrapper {
+.shop_card__tile .btn__wrapper {
     display: flex;
     order: 4;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
 }

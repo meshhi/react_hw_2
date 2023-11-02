@@ -9,11 +9,11 @@ const ShopCard = ({cardData, isList}) => {
             {
                 isList
                 ? <>
-                <span className={s.shop_card__price}>{cardData.price}</span>
+                <span className={s.shop_card__price}>${cardData.price}</span>
                 <button className={s.shop_card__add_btn}>Add to cart</button>
                 </>
                 : <div className={s.btn__wrapper}>
-                    <span className={s.shop_card__price}>{cardData.price}</span>
+                    <span className={s.shop_card__price}>${cardData.price}</span>
                     <button className={s.shop_card__add_btn}>Add to cart</button>
                 </div>
 
